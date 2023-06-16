@@ -9,5 +9,13 @@ const GET_CLIENTS = gql`
     }
   }
 `;
+const GET_CLIENT_IDS = gql`
+  query getClientIDs {
+    clients {
+      id
+      name
+    }
+  }
+`;
 
-export { GET_CLIENTS };
+export { GET_CLIENTS, GET_CLIENT_IDS };

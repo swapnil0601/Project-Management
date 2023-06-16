@@ -4,7 +4,7 @@ import Projects from "../components/Projects";
 
 const Home = () => {
   return (
-    <div>
+    <div className="px-16">
       <Projects />
       <Clients />
     </div>
