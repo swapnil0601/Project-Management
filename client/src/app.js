@@ -5,6 +5,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Navbar from "./components/Navbar";
 import Project from "./components/Project";
 
+const server = process.env.REACT_APP_API || "http://localhost:5000/";
 const cache = new InMemoryCache({
   typePolicies: {
     Query: {
@@ -25,7 +26,7 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql",
+  uri: `${server}/graphql`,
   cache,
 });
 function App() {
